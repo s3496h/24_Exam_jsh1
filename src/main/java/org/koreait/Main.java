@@ -2,19 +2,26 @@ package org.koreait;
 
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
+ class fibonacci {
+     public static int fibo (int n){
+         if(n==0){
+             return 0;
+         }
+         else if(n==1){
+             return 1;
+         }
+         else {
+             return fibo(n-1) + fibo(n-2);
+         }
+     }
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= 5-i; j++) {
-                System.out.print("a");
-            }
-            for (int j = 1; j <= (i*2)-1; j++) {
-            System.out.print("*");
-        }
-        System.out.println(" ");
-    }
-}
+     public static void main(String[] args) {
+         fibonacci fib = new fibonacci();
+         int a = 34;
+         for(int i=1;i<=a;i++){
+             System.out.println(fib.fibo(i));
+         }
+
+     }
+
 }
